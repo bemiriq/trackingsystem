@@ -38,14 +38,14 @@ class issueModel extends CI_Model
 
   function update($data,$id)
   {
-    $this->db->where("user_id",$id);
+    $this->db->where("issue_id",$id);
     $this->db->update($this->table,$data);
   }
 
 
   function delete($id)
   {
-    $this->db->where("user_id",$id);
+    $this->db->where("issue_id",$id);
     $this->db->delete($this->table);
   }
 
