@@ -36,6 +36,19 @@
 							<div class="form-group">
 								<textarea class="form-control" rows="3" name="post[description]" placeholder="Issue Description Here..."></textarea>
 							</div>
+							<div class="form-group">
+								<select type="hidden" style="display:none" class="form-control" name="post[assigned_to]">
+								  <option>--Select--</option>
+								  <option>Pariskrit Shrestha</option>
+								  <option>Sangam Shrestha</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<select type="hidden" style="display:none" class="form-control" name="post[status]">
+								  <option>Pending</option>
+								  <option>Completed</option>
+								</select>
+							</div>
 							<input class="btn btn-info btn-block" name="add_issue" type="submit" value="Enter"/>
 							
 						</fieldset>

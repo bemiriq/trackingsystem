@@ -1,6 +1,6 @@
 <br><br>  
-  <div class="row" style="width: 100%;">
-    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-9 col-md-offset-3">
+  <div class="row" style="width: 90%;">
+    <div class="col-md-10 col-md-offset-3">
       <?php if($msg = $this->session->flashdata("message")): ?>
 
                 <h4 class="success" style="color:#59b7ff;">
@@ -22,6 +22,8 @@
                            <th>Class</th>
                            <th>Issue Description</th>
                            <th>Date posted</th>
+                           <th>Assigned To</th>
+                           <th>Status</th>
                            <th>Update</th>
                            <th>Delete</th>
 
@@ -36,7 +38,9 @@
                            <td><?=$post->class?></td>
                            <td><?=$post->description?></td>
                            <td><?=$post->date_posted?></td>
-                          <td><a href="<?=site_url("track/editIssue/".$post->issue_id)?>">edit</a> </td>
+                           <td><?=$post->assigned_to?></td>
+                           <td><?=$post->status?></td>
+                           <td><a href="<?=site_url("track/editIssue/".$post->issue_id)?>">edit</a> </td>
                            <td> <a href="<?=site_url("track/deleteIssue/".$post->issue_id)?>">delete</a></td>
                         </tr>
                         <?php $i++; endforeach; ?>

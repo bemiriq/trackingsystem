@@ -1,8 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class issueModel extends CI_Model 
+class employeeModel extends CI_Model 
 {
-  var $table = "issue";
+  var $table = "employee";
   // var $table = "postmenu";
 
   function __construct()
@@ -38,21 +38,21 @@ class issueModel extends CI_Model
 
   function update($data,$id)
   {
-    $this->db->where("issue_id",$id);
+    $this->db->where("employee_id",$id);
     $this->db->update($this->table,$data);
   }
 
 
   function delete($id)
   {
-    $this->db->where("issue_id",$id);
+    $this->db->where("employee_id",$id);
     $this->db->delete($this->table);
   }
 
   /** Fetch data to update **/
   function getById($id)
   {
-    $this->db->where("issue_id",$id);
+    $this->db->where("employee_id",$id);
     $q = $this->db->get($this->table);
     if($q->num_rows() > 0)
     {
@@ -60,6 +60,13 @@ class issueModel extends CI_Model
     }
     return false;
   }
+
+  /** Fetch employee name to add or update issue **/
+  function get_fichas() {
+    $this->db->select('employee_name')->from('employee');
+    $query=$this->db->get();
+    return $query->result_array();
+}
 
 }
 

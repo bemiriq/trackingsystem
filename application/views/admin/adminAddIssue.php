@@ -36,7 +36,20 @@
 							<div class="form-group">
 								<textarea class="form-control" rows="3" name="post[description]" placeholder="Issue Description Here..."></textarea>
 							</div>
-							<input class="btn btn-info btn-block" name="add_issue" type="submit" value="Enter"/>
+							<div class="form-group">
+		                        <select class="form-control" name="post[employee_name]">
+		                            <?php foreach($fichas_info as $row){?>
+		                                <option value="<?php echo $row['employee_name'] ;?>" id="employee_name"><?php echo $row['employee_name'] ;?></option>
+		                            <?php }?>
+		                        </select>	
+							</div>
+							<div class="form-group">
+								<select type="hidden" class="form-control" name="post[status]">
+								  <option>Pending</option>
+								  <option>Completed</option>
+								</select>
+							</div>
+							<input class="btn btn-info btn-block" name="add_admin_issue" type="submit" value="Enter"/>
 							
 						</fieldset>
 					</form>
