@@ -63,18 +63,18 @@
                             <textarea type="text" value="<?=$post->description?>" class="form-control" name="post[description]"><?=$post->description?></textarea>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="assigned_to" style="color:#3fa9f5;" class="col-sm-3 control-label">Assigned To</label>
-                        <div class="col-sm-8">
+                    <!-- <div class="form-group"> -->
+                        <!-- <label for="assigned_to" style="color:#3fa9f5;" class="col-sm-3 control-label">Assigned To</label> -->
+                        <div class="col-sm-8" style="display:none">
                             
-                                <select class="form-control" value="<?=$post->employee_name?>" name="post[employee_name]">
-                                  <?php foreach($fichas_info as $row){?>
-                                        <option value="<?php echo $row['employee_name'] ;?>" id="employee_name"><?php echo $row['employee_name'] ;?></option>
-                                    <?php }?>
+                                <select class="form-control" value="<?=$post->assigned_to?>" name="post[assigned_to]">
+                                  <option value="<?=$post->assigned_to?>">--Select--</option>
+                                  <option value="<?=$post->assigned_to?>">Pariskrit Shrestha</option>
+                                  <option value="<?=$post->assigned_to?>">Sangam Shrestha</option>
                                 </select>
                             
                         </div>
-                    </div>
+                    <!-- </div> -->
                     <div class="form-group">
                         <label for="status" style="color:#3fa9f5;" class="col-sm-3 control-label">Issue Status</label>
                         <div class="col-sm-8">
@@ -88,7 +88,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-6 col-sm-5">
-                            <button type="submit" style="color:white; background:#3fa9f5;" name="update_issue" value="Update Issue" class="btn btn-default">Submit</button>
+                            <button type="submit" style="color:white; background:#3fa9f5;" name="employee_update_issue" value="Update Issue" class="btn btn-default">Submit</button>
                         </div>
                     </div>
 

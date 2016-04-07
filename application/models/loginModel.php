@@ -5,7 +5,7 @@ class loginmodel extends CI_Model
  function login($username,$password)
  {
      
-   $this -> db -> select('username, password');
+   $this -> db -> select('username, password, user_category');
    $this -> db -> from('user');
    $this -> db -> where('username', $username);
    $this -> db -> where('password', $password);

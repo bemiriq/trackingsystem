@@ -60,6 +60,12 @@ class issueModel extends CI_Model
     }
     return false;
   }
+  
+  function get_fichas() {
+    $this->db->select('employee_name')->from('employee');
+    $query=$this->db->get();
+    return $query->result_array();
+}
 
 }
 

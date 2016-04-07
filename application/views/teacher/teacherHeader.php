@@ -30,21 +30,9 @@
 				<a class="navbar-brand" href="#"><span>Tracking</span>System</a>
 				<ul class="user-menu">
 					<li class="dropdown pull-right">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> User <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Teacher <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Profile</a></li>
-							<li><a href="#"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg> Settings</a></li>
-							<li><a href="#"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Logout</a></li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="user-menu">
-					<li class="dropdown pull-right">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Notification <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Profile</a></li>
-							<li><a href="#"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg> Settings</a></li>
-							<li><a href="#"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Logout</a></li>
+							<li><a href="<?=site_url('track/logout')?>"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Logout</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -60,7 +48,7 @@
 			</div>
 		</form> -->
 		<ul class="nav menu">
-			<li class="active"><a href="<?=site_url('track/admin')?>"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Dashboard</a></li>
+			<li class="active"><a href="<?=site_url('track/teacherDashboard')?>"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Dashboard</a></li>
 			<!-- this below is used to register issue -->
 			<!-- <li><a href="<?=site_url('track/addIssue')?>"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Add Issue</a></li> -->
 			<!-- end of linking issue register -->
@@ -71,30 +59,13 @@
 				</a>
 				<ul class="children collapse" id="sub-item-1">
 					<li>
-						<a class="" href="<?=site_url('track/admin_add_issue')?>">
+						<a class="" href="<?=site_url('track/teacher_add_issue')?>">
 							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Add Issue
 						</a>
 					</li>
 					<li>
-						<a class="" href="<?=site_url('track/viewIssue')?>">
+						<a class="" href="<?=site_url('track/teacherViewIssue')?>">
 							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> View Issue
-						</a>
-					</li>
-				</ul>
-			</li>
-			<li class="parent ">
-				<a href="#">
-					<span data-toggle="collapse" href="#sub-item-2"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> IT Staff 
-				</a>
-				<ul class="children collapse" id="sub-item-2">
-					<li>
-						<a class="" href="<?=site_url('track/admin_add_employee')?>">
-							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Add IT Staff
-						</a>
-					</li>
-					<li>
-						<a class="" href="<?=site_url('track/admin_view_employee')?>">
-							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> View IT Staff
 						</a>
 					</li>
 				</ul>
