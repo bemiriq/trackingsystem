@@ -62,10 +62,82 @@ class issueModel extends CI_Model
   }
   
   function get_fichas() {
-    $this->db->select('employee_name')->from('employee');
+    $this->db->select('assigned_to')->from('employee');
     $query=$this->db->get();
     return $query->result_array();
-}
+  }
+
+  public function harvest(){
+
+      $query = $this->db->query("SELECT name,priority,building,class,description,assigned_to,status,date_posted FROM issue WHERE status = 'Pending'");
+
+      if($query->num_rows()){
+          foreach ($query->result() as $row)
+         {
+            echo '<hr>' . $row->name .' issue assigned to '. $row->assigned_to  .'<br>';
+         }
+         
+        }
+      }
+
+  public function employeeDashboard1(){
+    $query = $this->db->query(" SELECT`issue_id` FROM `issue` order by issue_id desc limit 1");
+      if($query->num_rows()){
+          foreach ($query->result() as $row)
+         {
+            echo $row->issue_id;
+         }
+         
+        }
+  }
+
+ 
+
+  public function employeeDashboard2(){
+     $query = $this->db->query(" SELECT`user_id` FROM `user` order by user_id desc limit 1");
+      if($query->num_rows()){
+          foreach ($query->result() as $row)
+         {
+            echo $row->user_id;
+         }
+         
+        }
+  }
+
+  public function employeeDashboard3(){
+    $query = $this->db->query(" SELECT`employee_id` FROM `employee` order by employee_id desc limit 1");
+      if($query->num_rows()){
+          foreach ($query->result() as $row)
+         {
+            echo $row->employee_id;
+         }
+         
+        }
+  }
+
+  public function employeeDashboard4(){
+    $query = $this->db->query(" SELECT`issue_id` FROM `issue` order by issue_id desc limit 1");
+      if($query->num_rows()){
+          foreach ($query->result() as $row)
+         {
+            echo $row->issue_id;
+         }
+         
+        }
+  }
+
+  // public function harvest(){
+
+  //     $query = $this->db->query("SELECT name,category_name,stock_remain FROM stock WHERE stock_remain < 10");
+
+  //     if($query->num_rows()){
+  //         foreach ($query->result() as $row)
+  //        {
+  //           echo '<hr>' . $row->name .' '. $row->category_name  .' stock remain only ' . $row->stock_remain .'<br>';
+  //        }
+         
+  //       }
+  //     }
 
 }
 

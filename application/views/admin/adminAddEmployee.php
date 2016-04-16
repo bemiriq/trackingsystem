@@ -15,7 +15,7 @@
 					<form action="" method="post">
 						<fieldset>
 							<div class="form-group">
-								<input class="form-control" placeholder="Enter Employee Full Name" name="post[employee_name]" type="text" autofocus="">
+								<input class="form-control" placeholder="Enter Employee Full Name" name="post[assigned_to]" type="text" autofocus="">
 							</div>
 							<input class="btn btn-info btn-block" name="add_employee" type="submit" value="Add Employee"/>
 							

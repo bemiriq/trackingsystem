@@ -11,17 +11,18 @@
       <div class="login-panel panel panel-default">
 
             <div id="page-wrapper">
-
+                <div class="panel-heading">Add Employee</div>
+                <div class="panel-body">
                 <!-- /.row -->
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-7">
                     
                         <form name="frmOne" class="form-horizontal" action="" method="post">
 
                             <div class="form-group">
-                                <label for="employee_name" style="color:#3fa9f5;" class="col-sm-3 control-label">Employee Name</label>
+                                <label for="assigned_to" style="color:#3fa9f5;" class="col-sm-3 control-label">Employee Name</label>
                                 <div class="col-sm-8">
-                                    <input type="text" value="<?=$post->employee_name?>" class="form-control" name="post[employee_name]" id="employee_name" placeholder="Enterr full name of employee">
+                                    <input type="text" value="<?=$post->assigned_to?>" class="form-control" name="post[assigned_to]" id="assigned_to" placeholder="Enterr full name of employee">
                                 </div>
                             </div>
 

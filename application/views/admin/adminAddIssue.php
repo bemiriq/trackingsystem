@@ -37,9 +37,9 @@
 								<textarea class="form-control" rows="3" name="post[description]" placeholder="Issue Description Here..."></textarea>
 							</div>
 							<div class="form-group">
-		                        <select class="form-control" name="post[employee_name]">
+		                        <select class="form-control" value="<?php echo $row['assigned_to'] ;?>" name="post[assigned_to]">
 		                            <?php foreach($fichas_info as $row){?>
-		                                <option value="<?php echo $row['employee_name'] ;?>" id="employee_name"><?php echo $row['employee_name'] ;?></option>
+		                                <option value="<?php echo $row['assigned_to'] ;?>" id="assigned_to"><?php echo $row['assigned_to'] ;?></option>
 		                            <?php }?>
 		                        </select>	
 							</div>

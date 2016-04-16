@@ -21,8 +21,8 @@
 							<svg class="glyph stroked bag"><use xlink:href="#stroked-bag"></use></svg>
 						</div>
 						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">120</div>
-							<div class="text-muted">New Orders</div>
+							<div class="large"><?php $this->postissue->employeeDashboard1() ?></div>
+							<div class="text-muted">Total Issue</div>
 						</div>
 					</div>
 				</div>
@@ -34,8 +34,8 @@
 							<svg class="glyph stroked empty-message"><use xlink:href="#stroked-empty-message"></use></svg>
 						</div>
 						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">52</div>
-							<div class="text-muted">Comments</div>
+							<div class="large"><?php $this->postissue->employeeDashboard2() ?></div>
+							<div class="text-muted">Users</div>
 						</div>
 					</div>
 				</div>
@@ -47,8 +47,8 @@
 							<svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
 						</div>
 						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">24</div>
-							<div class="text-muted">New Users</div>
+							<div class="large"><?php $this->postissue->employeeDashboard3() ?></div>
+							<div class="text-muted">Total IT Staff</div>
 						</div>
 					</div>
 				</div>
@@ -60,7 +60,7 @@
 							<svg class="glyph stroked app-window-with-content"><use xlink:href="#stroked-app-window-with-content"></use></svg>
 						</div>
 						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">25.2k</div>
+							<div class="large"><?php $this->postissue->employeeDashboard4() ?></div>
 							<div class="text-muted">Page Views</div>
 						</div>
 					</div>

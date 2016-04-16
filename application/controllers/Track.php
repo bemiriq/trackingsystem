@@ -162,6 +162,24 @@ class Track extends CI_Controller {
 		}
 	 }
 
+	 public function adminRegister(){
+	 	if(@$_POST['create_admin_user'])
+		{
+			$data = $_POST['post'];
+			$data['date_posted'] = date('Y-m-d H:i:s');
+			$this->postregister->add($data);
+			$this->session->set_flashdata('message',"User created successfully");
+			$this->load->view("admin/adminRegister");
+			$this->adminHeader();
+			$this->adminFooter();
+		}
+		else{
+			$this->adminHeader();
+			$this->adminFooter();
+			$this->load->view("admin/adminRegister");
+		}
+	 }
+
 	 public function dashboard()
 	 {
 	 	$this->header();
@@ -252,6 +270,7 @@ class Track extends CI_Controller {
 			$data = $_POST['post'];
 			$data['date_posted'] = date('Y-m-d H:i:s');
 			$this->postissue->add($data);
+			// $this->postissue->get_fitchas();
 			$newsdata['fichas_info'] = $this->postemployee->get_fichas();
 			$this->session->set_flashdata('message',"Issue submitted successfully");
 			$this->adminHeader();
@@ -390,22 +409,23 @@ class Track extends CI_Controller {
 
 		if(@$_POST['update_issue'])
 		{
-
-			$this->load->view('header');
-			$this->load->view('footer');
 			$data = $_POST['post'];
 			$this->postissue->update($data,$id);
-			$newsdata['fichas_info'] = $this->postemployee->get_fichas();
+			$data['fichas_info'] = $this->postemployee->get_fichas();
 			$this->session->set_flashdata('message',"Issue updated successfully");
 			redirect("track/editIssue");
 			// echo '2';
+
+			$this->adminHeader();
+			$this->adminFooter();
+			redirect("track/editIssue");
 		}
 
 		// echo '3';
 		$this->adminHeader();
 		$this->adminFooter();
 		$data['post'] = $post;
-		$newsdata['fichas_info'] = $this->postemployee->get_fichas();
+		$data['fichas_info'] = $this->postemployee->get_fichas();
 		$this->load->view('admin/editIssue',$data);
 	}
 

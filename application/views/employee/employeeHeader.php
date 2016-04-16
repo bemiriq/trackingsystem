@@ -36,6 +36,14 @@
 						</ul>
 					</li>
 				</ul>
+				<ul class="user-menu">
+					<li class="dropdown pull-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Notification <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="<?=site_url('track/employeeViewIssue')?>"><?php $this->postissue->harvest() ?> </a></li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 							
 		</div><!-- /.container-fluid -->

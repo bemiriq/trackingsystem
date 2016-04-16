@@ -63,7 +63,13 @@ class employeeModel extends CI_Model
 
   /** Fetch employee name to add or update issue **/
   function get_fichas() {
-    $this->db->select('employee_name')->from('employee');
+    $this->db->select('assigned_to')->from('employee');
+    $query=$this->db->get();
+    return $query->result_array();
+}
+
+function get_fichass() {
+    $this->db->select('assigned_to')->from('employee');
     $query=$this->db->get();
     return $query->result_array();
 }

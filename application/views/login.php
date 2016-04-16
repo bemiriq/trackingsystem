@@ -37,7 +37,7 @@
 									<a href="<?=site_url('track/register')?>" style="margin-left: 80%;">Register</a>	
 							</div>
 
-							<input class="btn btn-lg btn-success btn-block" name="submit" type="submit" value="Login"/>
+							<input class="btn btn-lg btn-info btn-block" name="submit" type="submit" value="Login"/>
 						</fieldset>
 					</form>
 				</div>

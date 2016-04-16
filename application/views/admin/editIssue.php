@@ -7,15 +7,16 @@
                     <?=$msg?>
                 </h4>
 
-      <?php endif; ?>
+      <?php endif; ?>  
       <div class="login-panel panel panel-default">
 
             <div id="page-wrapper">
 
                 <!-- /.row -->
                 <div class="row">
-                    <div class="col-lg-6">
-                    
+                    <div class="col-lg-7">
+                    <div class="panel-heading">Add Employee</div>
+                <div class="panel-body">
                         <form name="frmOne" class="form-horizontal" action="" method="post">
                     <!-- <p>
                         <label for="date_posted">Date post</label>
@@ -66,13 +67,12 @@
                     <div class="form-group">
                         <label for="assigned_to" style="color:#3fa9f5;" class="col-sm-3 control-label">Assigned To</label>
                         <div class="col-sm-8">
-                            
-                                <select class="form-control" value="<?=$post->employee_name?>" name="post[employee_name]">
-                                  <?php foreach($fichas_info as $row){?>
-                                        <option value="<?php echo $row['employee_name'] ;?>" id="employee_name"><?php echo $row['employee_name'] ;?></option>
+                            <!-- <input type="text" value="<?=$post->assigned_to?>" class="form-control" name="post[assigned_to]"/> -->
+                                <select class="form-control" value="<?=$post->assigned_to?>" name="post[assigned_to]">
+                                    <?php foreach($fichas_info as $row){?>
+                                        <option value="<?php echo $row['assigned_to'] ;?>" id="assigned_to"><?php echo $row['assigned_to'] ;?></option>
                                     <?php }?>
                                 </select>
-                            
                         </div>
                     </div>
                     <div class="form-group">

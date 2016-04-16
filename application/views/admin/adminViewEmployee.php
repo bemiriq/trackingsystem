@@ -25,7 +25,7 @@
                      <tbody>
                         <?php $i=1; foreach($posts as $post): ?>
                         <tr <?=($i % 2 == 0) ? 'class="even"' : '' ?>>
-                           <td><?=$post->employee_name?></td>
+                           <td><?=$post->assigned_to?></td>
                            <td><?=$post->date_posted?></td>
                            <td><a href="<?=site_url("track/editEmployee/".$post->employee_id)?>">edit</a> </td>
                            <td> <a href="<?=site_url("track/deleteEmployee/".$post->employee_id)?>">delete</a></td>
