@@ -12,6 +12,7 @@ class Track extends CI_Controller {
 	   $this->load->model('registerModel','postregister');
 	   $this->load->model('issueModel','postissue');
 	   $this->load->model('employeeModel','postemployee');
+	   $this->load->model('studentModel','postfeedback');
 	 }
 	/**
 	 * Index Page for this controller.
@@ -539,5 +540,23 @@ class Track extends CI_Controller {
 		$this->session->set_flashdata('message',"Employee deleted successfully");
 		redirect("track/admin_view_employee");
 	}
+
+	public function studentFeedback(){
+	 	if(@$_POST['add_feedback'])
+		{
+			$data = $_POST['post'];
+			$data['date_posted'] = date('Y-m-d H:i:s');
+			$this->postfeedback->add($data);
+			$this->session->set_flashdata('message',"Feedback added successfully");
+			$this->load->view("student/studentFeedbackView");
+			$this->studentHeader();
+			$this->studentFooter();
+		}
+		else{
+			$this->studentHeader();
+			$this->studentFooter();
+			$this->load->view("student/studentFeedbackView");
+		}
+	 }
 
 }

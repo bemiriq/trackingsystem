@@ -72,6 +72,7 @@
 					</li>
 				</ul>
 			</li>
+			<li><a href="<?=site_url('track/studentFeedback')?>"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Add Feedback</a></li>
 		</ul>
 
 	</div><!--/.sidebar-->
